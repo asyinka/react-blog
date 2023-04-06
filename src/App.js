@@ -4,6 +4,7 @@ function App() {
   let myTitle = `This is my first React App project`;
   let likes = 50;
   let myArr = ["CSS, ", "HTML, ", "JavaScript, ", "React..."];
+  const ggLink = "https://www.google.com";
 
   //Reac doesnt accept Bolean and objects as variables
 
@@ -16,6 +17,10 @@ function App() {
         <p>
           This is {1} Math evaluation {Math.random() * 10} in JSX{" "}
         </p>
+        <a href={ggLink} target="_blank" rel="noreferrer">
+          Google Site &#10084;
+        </a>
+        {/* //when adding link as variable remove the apostrophes */}
       </div>
     </div>
   );
