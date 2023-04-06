@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <NavBar />
       <div className="content">
         <h1> First React project </h1>
       </div>
