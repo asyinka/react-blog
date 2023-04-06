@@ -13,6 +13,9 @@ function App() {
         <h1> {myTitle} </h1>
         <p> This project has gotten {likes} likes</p>
         <p>In the bag are {myArr} and now React!!! loading</p>
+        <p>
+          This is {1} Math evaluation {Math.random() * 10} in JSX{" "}
+        </p>
       </div>
     </div>
   );
