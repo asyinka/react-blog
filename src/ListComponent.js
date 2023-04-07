@@ -1,8 +1,5 @@
-const BlogList = (props) => {
-  const blogs = props.blogs;
-  const year = props.year;
-  const title = props.title;
-
+const BlogList = ({ blogs, title, year }) => {
+  //props can be replaced with the actual parameters instead. When destructuring order matters
   return (
     <div className="blog-list">
       <h1> {title} </h1>
