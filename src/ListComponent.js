@@ -1,5 +1,5 @@
 const BlogList = ({ blogs, title, year, handleDelete }) => {
-  //props can be replaced with the actual parameters instead. When destructuring order matters
+  //props can be replaced with the actual parameters instead. When destructuring, order matters
   return (
     <div className="blog-list">
       <h1> {title} </h1>
