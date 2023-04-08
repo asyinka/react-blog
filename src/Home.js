@@ -21,6 +21,12 @@ const Home = () => {
       author: "Jane",
       id: 3,
     },
+    {
+      title: "Talking about React",
+      body: "lorem ipsolum do...",
+      author: "Shakespeare",
+      id: 4,
+    },
   ]);
 
   const [clickNo, setClickNo] = useState(0);
