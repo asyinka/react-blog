@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BlogList = ({ blogs, title, year }) => {
   //props can be replaced with the actual parameters instead. When destructuring, order matters
   return (
@@ -6,8 +8,10 @@ const BlogList = ({ blogs, title, year }) => {
       <p> {year} blogs </p>
       {blogs.map((blog) => (
         <div className="blog-preview" key={blog.id}>
-          <h2>{blog.title}</h2>
-          <p> Written by: {blog.author}</p>
+          <Link to={`/blogs/${blog.id}`}>
+            <h2>{blog.title}</h2>
+            <p> Written by: {blog.author}</p>
+          </Link>
         </div>
       ))}
     </div>
