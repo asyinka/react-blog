@@ -6,8 +6,10 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const abortFetch = new AbortController();
+    //maynot be neccessary, it handles error that occurs when users swapped very fast btw two different links (one with a fetch)
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortFetch.signal })
         .then((resp) => {
           if (!resp.ok) {
             throw Error(
@@ -22,10 +24,17 @@ const useFetch = (url) => {
           setError(null);
         })
         .catch((err) => {
-          setIsPending(false);
-          setError(err.message);
+          if (err.name === "AbortError") {
+            setError("Fetch process failed");
+            console.log("Fetch aborted");
+          } else {
+            setIsPending(false);
+            setError(err.message);
+          }
         });
     }, 1000);
+
+    return () => abortFetch.abort();
   }, [url]);
 
   return { pageData, isPending, error };
