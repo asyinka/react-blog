@@ -65,6 +65,36 @@
       "body": "<button>Submit Blog</button>dhdkkdncbvdvjdjdvvddbd",
       "author": "Mosh",
       "id": 11
+    },
+    {
+      "title": "dd",
+      "body": "dddd",
+      "author": "Select Author",
+      "id": 12
+    },
+    {
+      "title": "bale",
+      "body": "takljfd",
+      "author": "Mario",
+      "id": 13
+    },
+    {
+      "title": "Game",
+      "body": "Playing JavaScrpy<button>Submit Blog</button> games",
+      "author": "Mario",
+      "id": 14
+    },
+    {
+      "title": "Mario games",
+      "body": "The inception of Web3",
+      "author": "Mario",
+      "id": 15
+    },
+    {
+      "title": "pushState",
+      "body": "It adds a new path to the history stack",
+      "author": "Mario",
+      "id": 16
     }
   ]
 }
