@@ -98,3 +98,20 @@
   border-radius: 8px;
   cursor: pointer;
 }
+/* not found page */
+.notFound >* {
+  margin-bottom: 10px;
+}
+.notFound a {
+  color: rgb(49, 197, 5);
+}
+
+.notFound a::after {
+  color: green;
+  content: "-->";
+  margin-left: 5px;
+  transition: 0.15s;
+}
+.notFound a:hover::after {
+    margin-left: 10px;
+  }
