@@ -31,7 +31,7 @@ const BlogDetails = () => {
           <div> {blog.body} </div>
         </div>
       )}
-      <button onClick={HandleClick}>Delete</button>
+      {blog && <button onClick={HandleClick}>Delete</button>}
     </article>
   );
 };
