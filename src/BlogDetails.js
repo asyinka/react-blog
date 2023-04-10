@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useFetch/useFetch";
 
 const BlogDetails = () => {
@@ -8,6 +8,17 @@ const BlogDetails = () => {
     isPending,
     error,
   } = useFetch("http://localhost:8000/blogs/" + id);
+  const historyUse = useHistory();
+
+  const HandleClick = () => {
+    if (!blog) {
+      return;
+    } //this prevents error from occuring when user clicks delete button during the process of fetching
+
+    fetch("http://localhost:8000/blogs/" + blog.id, {
+      method: "DELETE",
+    }).then(() => historyUse.push("/"));
+  };
 
   return (
     <article className="blog-details">
@@ -20,6 +31,7 @@ const BlogDetails = () => {
           <div> {blog.body} </div>
         </div>
       )}
+      <button onClick={HandleClick}>Delete</button>
     </article>
   );
 };
